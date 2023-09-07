@@ -74,7 +74,7 @@ if (isset($_POST["name"])){
 	<!-- <input type="text" name="name" placeholder="Full Name" required /> -->
 	<div class="form-group">
               <label for="sch">Student ID/ Roll Number</label>
-              <input class="form-control"  type="text" name="id" placeholder="Student ID/ Roll Number" required />
+              <input class="form-control"  type="number" name="id" placeholder="Student ID/ Roll Number" required />
        		</div>
 	<div class="form-group">
               <label for="sch">Date of Birth</label>

@@ -19,7 +19,7 @@
 
 <body>
 
-	<div class="w3-sidebar w3-bar-block" style="width:15%;border-right:1px solid black;">
+	<div class="w3-sidebar w3-bar-block" style="width:20%;border-right:1px solid black;">
 	<center>	<h3><a href="\dbdm\" >Homepage</a></h3></center><br>
 	<center>	<h4><strong>Front-End Forms:-</strong></h4></center>
 	<a href="#" onclick="GetPage('addNewStd.php');" class="w3-bar-item w3-button">Add New Student</a>
@@ -30,18 +30,23 @@
 		< -->
 <br>
 		<center>	<h4><strong>SQL Output Page:-</strong></h4></center>
-		<a href="#" onclick="GetPage('1.php');" class="w3-bar-item w3-button">1.</a>
-		<a href="#" onclick="GetPage('2.php');" class="w3-bar-item w3-button">2.</a>
-		<a href="#" onclick="GetPage('3.php');" class="w3-bar-item w3-button">3.</a>
-		<a href="#" onclick="GetPage('4.php');" class="w3-bar-item w3-button">4.</a>
+		<a href="#" onclick="GetPage('1.php');" class="w3-bar-item w3-button">1. Find the names of all students in the B Tech Program.</a>
+		<a href="#" onclick="GetPage('2.php');" class="w3-bar-item w3-button">2.Find the students in MTech with a fellowship equal to 2,000.</a>
+		<a href="#" onclick="GetPage('3a.php');" class="w3-bar-item w3-button">3a.Instructor NATURAL JOIN Teaches</a>
+		<a href="#" onclick="GetPage('3b.php');" class="w3-bar-item w3-button">3b.Instructor LEFT JOIN Teaches</a>
+		<a href="#" onclick="GetPage('3c.php');" class="w3-bar-item w3-button">3c.Instructor RIGHT JOIN Teaches</a>
+		<a href="#" onclick="GetPage('4.php');" class="w3-bar-item w3-button">4.Find all courses taught in the Summer 2019 semester or in the Spring 2020 semester.</a>
+		<br>
+		<center>	<h4><strong>General SQL Output:-</strong></h4></center>
 		<a href="#" onclick="GetPage('ShowAllStd.php');" class="w3-bar-item w3-button">Show All Students</a>
+
 		<a href="#" onclick="GetPage('ShowAllInst.php');" class="w3-bar-item w3-button">Show All Instructors</a>
 
 	  
 	
 	</div>
 
-<div id="result" style="margin-left:17%;margin-right:2%">
+<div id="result" style="margin-left:22%;margin-right:2%">
 
 	<center>
 		<h3>Database and Data Mining (CS501) <br><u>Assignment 1</u></h2>

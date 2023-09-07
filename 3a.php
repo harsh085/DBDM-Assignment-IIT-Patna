@@ -1,3 +1,5 @@
+<h3>3. The Cartesian product of the relations instructor and teaches.<br>&emsp; &ensp;&emsp; &ensp;a. NATURAL JOIN</h3><br>
+
 <center> <h1>Instructor NATURAL JOIN Teaches</h1>
 <?php 
 	$query = "SELECT * FROM instructor NATURAL JOIN teaches;";

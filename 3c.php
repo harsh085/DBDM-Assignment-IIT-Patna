@@ -1,7 +1,7 @@
-<h3>2. Find the students in M Tech with a fellowship equal to 2000.</h3><br>
-<center> <h1>Student Table</h1>
+<h3>3. The Cartesian product of the relations instructor and teaches.<br>&emsp; &ensp;&emsp; &ensp;a. RIGHT JOIN</h3><br>
+<center> <h1>Instructor RIGHT JOIN Teaches</h1>
 <?php 
-		$query = "SELECT ID, name, dob, email, program, fellowship  FROM `student` WHERE program='MTech' AND fellowship=2000;";
+	$query = "SELECT * FROM instructor RIGHT JOIN teaches ON instructor.ID = teaches.ID;";
 	echo "<p> <strong>Query - ". $query."</strong><br></p>";
  ?></center>
 	<table id="myTable" class="table table-striped table-bordered" >
@@ -13,23 +13,30 @@
 						Student Name 					
 					</th>
 					<th>
-						Date of Birth					
+						Department Name				
 					</th>
 					<th>
-						Email						
+						Salary						
 					</th>
 					<th>
-						Program	 					
+						Course ID	 					
 					</th>
 					<th>
-						Fellowship Amount					
+						Section ID					
 					</th>
+					<th>
+						Semester				
+					</th>
+					<th>
+						Year					
+					</th>
+
 				</tr>
 <?php
 require('db.php');
 // If form submitted, insert values into the database.
-		// $temp = 1;
-	
+		
+		
         $data = mysqli_query($con,$query);
 		if($data){
 				foreach ($data as $key => $value) {
@@ -39,33 +46,31 @@ require('db.php');
 
 
 					<tr>
-					
 						<td >
 							<?php echo $value['ID']; ?>
-							
 						</td>
 						<td >
 							<?php echo $value['name']; ?>
-							
 						</td>
 						<td >
-							<?php echo $value['dob']; ?>
-							
-						</td>
-						<td>
-							<?php echo $value['email']; ?>
-							
+							<?php echo $value['dept_name']; ?>
 						</td>
 						<td >
-							<?php echo $value['program']; ?>
-							
+							<?php echo $value['salary']; ?>
 						</td>
 						<td >
-							<?php echo $value['fellowship']; ?>
-							
+							<?php echo $value['course_id']; ?>
 						</td>
 
-
+						<td >
+							<?php echo $value['sec_id']; ?>
+						</td>
+						<td >
+							<?php echo $value['semester']; ?>
+						</td>
+						<td >
+							<?php echo $value['year']; ?>
+						</td>
 					</tr>
 
 		<?php

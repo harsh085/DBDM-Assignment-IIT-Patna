@@ -28,9 +28,11 @@ if (isset($_POST["stdName"])){
 <!-- <div class="form"> -->
 
 <br>
-<p> Database has been defined such a way that the relationship between student and instructor is is a <strong>one-to-many relationship</strong>, Since a student can have only one instructor but an instructor can have many students. <br>
+<!-- <center> -->
+<p> Database has been defined such a way that the relationship between student and instructor is a <strong>one-to-many relationship</strong>, Since a student can have only one instructor but an instructor can have many students. <br>
 So filtering out only those students who are not assigned any instructor.<br> <strong>Query for Student dropdown - <?php echo $query1; ?><br> Query for Instructor dropdown - <?php echo $query2; ?></strong> </p>
 <br>
+<!-- </center> -->
 <center> <h1>Create Advisor Relation between Student and Instructor</h1></center>
 <br>
 <form  name="registration" action="addIntoAdvisor.php" method="post">

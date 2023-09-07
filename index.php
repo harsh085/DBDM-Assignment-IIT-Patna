@@ -29,28 +29,28 @@
 		<!-- <a href="#" onclick="GetPage('StdRegForm.php');" class="w3-bar-item w3-button">Student Registration</a>
 		< -->
 <br>
-		<center>	<h4><strong>SQL Output Page:-</strong></h4></center>
+		<center>	<h4><strong>SQL Output Pages:-</strong></h4></center>
 		<a href="#" onclick="GetPage('1.php');" class="w3-bar-item w3-button">1. Find the names of all students in the B Tech Program.</a>
-		<a href="#" onclick="GetPage('2.php');" class="w3-bar-item w3-button">2.Find the students in MTech with a fellowship equal to 2,000.</a>
-		<a href="#" onclick="GetPage('3a.php');" class="w3-bar-item w3-button">3a.Instructor NATURAL JOIN Teaches</a>
-		<a href="#" onclick="GetPage('3b.php');" class="w3-bar-item w3-button">3b.Instructor LEFT JOIN Teaches</a>
-		<a href="#" onclick="GetPage('3c.php');" class="w3-bar-item w3-button">3c.Instructor RIGHT JOIN Teaches</a>
-		<a href="#" onclick="GetPage('4.php');" class="w3-bar-item w3-button">4.Find all courses taught in the Summer 2019 semester or in the Spring 2020 semester.</a>
-		<br>
+		<a href="#" onclick="GetPage('2.php');" class="w3-bar-item w3-button">2. Find the students in MTech with a fellowship equal to 2,000.</a>
+		<a href="#" onclick="GetPage('3a.php');" class="w3-bar-item w3-button">3a. Instructor NATURAL JOIN Teaches</a>
+		<a href="#" onclick="GetPage('3b.php');" class="w3-bar-item w3-button">3b. Instructor LEFT JOIN Teaches</a>
+		<a href="#" onclick="GetPage('3c.php');" class="w3-bar-item w3-button">3c. Instructor RIGHT JOIN Teaches</a>
+		<a href="#" onclick="GetPage('4.php');" class="w3-bar-item w3-button">4. Find all courses taught in the Summer 2019 semester or in the Spring 2020 semester.</a>
+		<br><!-- 
 		<center>	<h4><strong>General SQL Output:-</strong></h4></center>
 		<a href="#" onclick="GetPage('ShowAllStd.php');" class="w3-bar-item w3-button">Show All Students</a>
 
 		<a href="#" onclick="GetPage('ShowAllInst.php');" class="w3-bar-item w3-button">Show All Instructors</a>
-
+ -->
 	  
 	
 	</div>
 
 <div id="result" style="margin-left:22%;margin-right:2%">
 
-	<center>
-		<h3>Database and Data Mining (CS501) <br><u>Assignment 1</u></h2>
-		<h1>Website Instructions</h1></center>
+	<center>		<h1><u>Assignment 1</u></h1>
+		<h2>Database and Data Mining (CS501) <br></h1>
+</center>
 	<p>
 		<ul>
  		  <li><strong>As per requirement please access all registration forms from left.</strong></li>
@@ -65,8 +65,8 @@
 
 
 
-<footer class="footer" style="position: absolute;bottom: 0px;right:5px;">
-    <center><strong>DBDM Assignment</strong> &copy;Copyright <?php echo date('Y'); ?> By <b>Harshit Nigam</b></center>
+<footer class="footer" style="position: fixed;bottom: 0px;right:5px;">
+    <center><strong>DBDM Assignment</strong> &copy;Copyright <?php echo date('Y'); ?> By <b><a href='https://github.com/harsh085'>Harshit Nigam</a> </b></center>
 </footer>
 
 </body>

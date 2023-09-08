@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 06, 2023 at 09:09 PM
+-- Generation Time: Sep 07, 2023 at 07:09 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -32,14 +32,21 @@ CREATE TABLE `advisor` (
   `i_ID` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `advisor` VALUES 
-('101','10101'),
-('102','22222'),
-('103','22222'),
-('104','45565'),
-('105','45565'),
-('106','76543'),
-('107','76766');
+--
+-- Dumping data for table `advisor`
+--
+
+INSERT INTO `advisor` (`s_ID`, `i_ID`) VALUES
+('101', '10101'),
+('108', '10101'),
+('102', '22222'),
+('103', '22222'),
+('110', '23434'),
+('112', '24212'),
+('104', '45565'),
+('105', '45565'),
+('106', '76543'),
+('107', '76766');
 
 -- --------------------------------------------------------
 
@@ -58,11 +65,11 @@ CREATE TABLE `classroom` (
 --
 
 INSERT INTO `classroom` (`building`, `room_number`, `capacity`) VALUES
-('Block 3','101',500),
-('Block 9','514',10),
-('Block 9','312',70),
-('Block 6','100',30),
-('Block 6','120',50);
+('Block 3', '101', '500'),
+('Block 6', '100', '30'),
+('Block 6', '120', '50'),
+('Block 9', '312', '70'),
+('Block 9', '514', '10');
 
 -- --------------------------------------------------------
 
@@ -80,20 +87,21 @@ CREATE TABLE `course` (
 --
 -- Dumping data for table `course`
 --
-INSERT INTO `course` VALUES 
-('MA-101','Intro. to Mathematics','Mathematics',4),
-('MA-301','Statistics','Mathematics',4),
-('MA-399','Computational Mathematics','Mathematics',3),
-('CS-101','Intro. to Computer Science','Computer Science Eng',4),
-('CS-190','Game Design','Computer Science Eng',4),
-('CS-315','Robotics','Computer Science Eng',3),
-('CS-319','Image Processing','Computer Science Eng',3),
-('CS-347','Database System Concepts','Computer Science Eng',3),
-('EE-181','Intro. to Digital Systems','Computer Science Eng',3),
-('CE-201','Investment Banking','Civil Eng',3),
-('HIS-351','World History','History',3),
-('ME-199','Mechanical Eng Video Production','Mechanical Eng',3),
-('PHY-101','Physical Principles','Physics',4);
+
+INSERT INTO `course` (`course_id`, `title`, `dept_name`, `credits`) VALUES
+('CE-201', 'Investment Banking', 'Civil Eng', '3'),
+('CS-101', 'Intro. to Computer Science', 'Computer Science Eng', '4'),
+('CS-190', 'Game Design', 'Computer Science Eng', '4'),
+('CS-315', 'Robotics', 'Computer Science Eng', '3'),
+('CS-319', 'Image Processing', 'Computer Science Eng', '3'),
+('CS-347', 'Database System Concepts', 'Computer Science Eng', '3'),
+('EE-181', 'Intro. to Digital Systems', 'Computer Science Eng', '3'),
+('HIS-351', 'World History', 'History', '3'),
+('MA-101', 'Intro. to Mathematics', 'Mathematics', '4'),
+('MA-301', 'Statistics', 'Mathematics', '4'),
+('MA-399', 'Computational Mathematics', 'Mathematics', '3'),
+('ME-199', 'Mechanical Eng Video Production', 'Mechanical Eng', '3'),
+('PHY-101', 'Physical Principles', 'Physics', '4');
 
 -- --------------------------------------------------------
 
@@ -112,13 +120,14 @@ CREATE TABLE `department` (
 --
 
 INSERT INTO `department` (`dept_name`, `building`, `budget`) VALUES
-('Mathematics','Block 6',90000.00),
-('Computer Science Eng','Block 9',100000.00),
-('Electrical Eng','Block 9',85000.00),
-('Civil Eng','Block 9',120000.00),
-('History','Block 9',50000.00),
-('Mechanical Eng','Block 3',80000.00),
-('Physics','Block 6',70000.00);
+('Chemical Eng', 'Block 3', '300000.00'),
+('Civil Eng', 'Block 9', '120000.00'),
+('Computer Science Eng', 'Block 9', '100000.00'),
+('Electrical Eng', 'Block 9', '85000.00'),
+('History', 'Block 9', '50000.00'),
+('Mathematics', 'Block 6', '90000.00'),
+('Mechanical Eng', 'Block 3', '80000.00'),
+('Physics', 'Block 6', '70000.00');
 
 -- --------------------------------------------------------
 
@@ -138,19 +147,20 @@ CREATE TABLE `instructor` (
 --
 
 INSERT INTO `instructor` (`ID`, `name`, `dept_name`, `salary`) VALUES
-
-('10101','Srinivasan','Computer Science Eng',65000.00),
-('12121','Sriparna Saha','Civil Eng',90000.00),
-('15151','Asif Ekbal','Mechanical Eng',40000.00),
-('22222','Einstein','Physics',95000.00),
-('32343','Raju','History',60000.00),
-('33456','Chandra','Physics',87000.00),
-('45565','Joydeep Chandra','Computer Science Eng',75000.00),
-('58583','Rajesh','History',62000.00),
-('76543','Singh','Civil Eng',80000.00),
-('76766','Kavita','Mathematics',72000.00),
-('83821',' Arijit Mondal','Computer Science Eng',92000.00),
-('98345','Kimoj','Electrical Eng',80000.00);
+('10101', 'Srinivasan', 'Computer Science Eng', '165000.00'),
+('12121', 'Sriparna Saha', 'Civil Eng', '190000.00'),
+('15151', 'Asif Ekbal', 'Mechanical Eng', '140000.00'),
+('22222', 'Einstein', 'Physics', '195000.00'),
+('23434', 'Harshit Nigam', 'Civil Eng', '34324.00'),
+('24212', 'Jatin', NULL, '30000.00'),
+('32343', 'Raju', 'History', '160000.00'),
+('33456', 'Chandra', 'Physics', '187000.00'),
+('45565', 'Joydeep Chandra', 'Computer Science Eng', '195000.00'),
+('58583', 'Rajesh', 'History', '162000.00'),
+('76543', 'Singh', 'Civil Eng', '180000.00'),
+('76766', 'Kavita', 'Mathematics', '172000.00'),
+('83821', ' Arijit Mondal', 'Computer Science Eng', '192000.00'),
+('98345', 'Kimoj', 'Electrical Eng', '180000.00');
 
 -- --------------------------------------------------------
 
@@ -168,13 +178,13 @@ CREATE TABLE `prereq` (
 --
 
 INSERT INTO `prereq` (`course_id`, `prereq_id`) VALUES
-('MA-301', 'MA-101'),
-('MA-399', 'MA-101'),
 ('CS-190', 'CS-101'),
 ('CS-315', 'CS-101'),
 ('CS-319', 'CS-101'),
 ('CS-347', 'CS-101'),
-('EE-181','PHY-101');
+('EE-181', 'PHY-101'),
+('MA-301', 'MA-101'),
+('MA-399', 'MA-101');
 
 -- --------------------------------------------------------
 
@@ -197,21 +207,22 @@ CREATE TABLE `section` (
 --
 
 INSERT INTO `section` (`course_id`, `sec_id`, `semester`, `year`, `building`, `room_number`, `time_slot_id`) VALUES
-('MA-101','1','Summer',2019,'Block 9','514','B'),
-('MA-301','1','Summer',2020,'Block 9','514','A'),
-('CS-101','1','Fall',2019,'Block 3','101','H'),
-('CS-101','1','Spring',2020,'Block 3','101','F'),
-('CS-190','1','Spring',2019,'Block 9','312','E'),
-('CS-190','2','Spring',2019,'Block 9','312','A'),
-('CS-315','1','Spring',2020,'Block 6','120','D'),
-('CS-319','1','Spring',2020,'Block 6','100','B'),
-('CS-319','2','Spring',2020,'Block 9','312','C'),
-('CS-347','1','Fall',2019,'Block 9','312','A'),
-('EE-181','1','Spring',2019,'Block 9','312','C'),
-('CE-201','1','Spring',2020,'Block 3','101','B'),
-('HIS-351','1','Spring',2020,'Block 9','514','C'),
-('ME-199','1','Spring',2020,'Block 3','101','D'),
-('PHY-101','1','Fall',2019,'Block 6','100','A');
+('CE-201', '1', 'Spring', '2020', 'Block 3', '101', 'B'),
+('CS-101', '1', 'Fall', '2019', 'Block 3', '101', 'H'),
+('CS-101', '1', 'Spring', '2020', 'Block 3', '101', 'F'),
+('CS-190', '1', 'Spring', '2019', 'Block 9', '312', 'E'),
+('CS-190', '2', 'Spring', '2019', 'Block 9', '312', 'A'),
+('CS-315', '1', 'Spring', '2020', 'Block 6', '120', 'D'),
+('CS-319', '1', 'Spring', '2020', 'Block 6', '100', 'B'),
+('CS-319', '2', 'Spring', '2020', 'Block 9', '312', 'C'),
+('CS-347', '1', 'Fall', '2019', 'Block 9', '312', 'A'),
+('EE-181', '1', 'Spring', '2019', 'Block 9', '312', 'C'),
+('HIS-351', '1', 'Spring', '2020', 'Block 9', '514', 'C'),
+('MA-101', '1', 'Summer', '2019', 'Block 9', '514', 'B'),
+('MA-301', '1', 'Summer', '2020', 'Block 9', '514', 'A'),
+('ME-199', '1', 'Spring', '2020', 'Block 3', '101', 'D'),
+('PHY-101', '1', 'Fall', '2019', 'Block 6', '100', 'A');
+
 -- --------------------------------------------------------
 
 --
@@ -245,7 +256,11 @@ INSERT INTO `student` (`ID`, `name`, `dept_name`, `tot_cred`, `dob`, `email`, `p
 ('108', 'Rajat', 'Computer Science Eng', '23', '2000-01-01', 'Rajat@gm.com', 'BTech', 2022, 12000),
 ('109', 'Rohit', 'Electrical Eng', '23', '2002-01-01', 'Rohit@gm.com', 'MTech', 2023, 2000),
 ('110', 'Dinesh', 'Computer Science Eng', '23', '2001-01-01', 'Dinesh@gm.com', 'BTech', 2022, 12000),
-('111', 'Ashu', 'Computer Science Eng', '23', '2000-01-01', 'Ashu@gm.com', 'PHD', 2023, 2000);
+('111', 'Ashu', 'Computer Science Eng', '23', '2000-01-01', 'Ashu@gm.com', 'PHD', 2023, 2000),
+('112', 'Pranay', 'Mathematics', '23', '2000-04-01', 'pranay@gmail.com', 'PHD', 2022, 35000),
+('116', 'Alka', 'Physics', '23', '1997-02-02', 'alka@f.com', 'PHD', 2023, 35000),
+('120', 'Mohit', 'Computer Science Eng', '23', '1994-11-04', 'Mohit@gma.com', 'MTech', 2023, 2000),
+('123', 'Ketan k', 'Mathematics', '23', '2000-12-12', 'k@gm.com', 'MTech', 2023, 2000);
 
 -- --------------------------------------------------------
 
@@ -262,19 +277,36 @@ CREATE TABLE `takes` (
   `grade` varchar(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `takes`
+--
+
+INSERT INTO `takes` (`ID`, `course_id`, `sec_id`, `semester`, `year`, `grade`) VALUES
+('101', 'CS-101', '1', 'Fall', '2019', 'A'),
+('101', 'CS-347', '1', 'Fall', '2019', 'A-'),
+('102', 'CS-101', '1', 'Fall', '2019', 'C'),
+('102', 'CS-190', '2', 'Spring', '2019', 'A'),
+('102', 'CS-315', '1', 'Spring', '2020', 'A'),
+('102', 'CS-347', '1', 'Fall', '2019', 'A'),
+('103', 'HIS-351', '1', 'Spring', '2020', 'B'),
+('104', 'CE-201', '1', 'Spring', '2020', 'C+'),
+('105', 'PHY-101', '1', 'Fall', '2019', 'B-'),
+('106', 'CS-101', '1', 'Fall', '2019', 'F'),
+('106', 'CS-101', '1', 'Spring', '2020', 'B+'),
+('106', 'CS-319', '1', 'Spring', '2020', 'B'),
+('107', 'CS-101', '1', 'Fall', '2019', 'A-'),
+('107', 'CS-190', '2', 'Spring', '2019', 'B+'),
+('108', 'CS-101', '1', 'Fall', '2019', 'A'),
+('108', 'CS-319', '2', 'Spring', '2020', 'A'),
+('108', 'ME-199', '1', 'Spring', '2020', 'A-'),
+('109', 'EE-181', '1', 'Spring', '2019', 'C'),
+('110', 'CS-101', '1', 'Fall', '2019', 'C-'),
+('110', 'CS-315', '1', 'Spring', '2020', 'B'),
+('111', 'MA-101', '1', 'Summer', '2019', 'A'),
+('111', 'MA-301', '1', 'Summer', '2020', NULL);
+
 -- --------------------------------------------------------
-INSERT INTO `takes` VALUES 
-('101','CS-101','1','Fall',2019,'A'),
-('101','CS-347','1','Fall',2019,'A-'),
-('102','CS-101','1','Fall',2019,'C'),('102','CS-190','2','Spring',2019,'A'),('102','CS-315','1','Spring',2020,'A'),('102','CS-347','1','Fall',2019,'A'),
-('103','HIS-351','1','Spring',2020,'B'),('104','CE-201','1','Spring',2020,'C+'),
-('105','PHY-101','1','Fall',2019,'B-'),('106','CS-101','1','Fall',2019,'F'),
-('106','CS-101','1','Spring',2020,'B+'),('106','CS-319','1','Spring',2020,'B'),
-('107','CS-101','1','Fall',2019,'A-'),('107','CS-190','2','Spring',2019,'B+'),
-('108','ME-199','1','Spring',2020,'A-'),('108','CS-101','1','Fall',2019,'A'),
-('108','CS-319','2','Spring',2020,'A'),('109','EE-181','1','Spring',2019,'C'),
-('110','CS-101','1','Fall',2019,'C-'),('110','CS-315','1','Spring',2020,'B'),
-('111','MA-101','1','Summer',2019,'A'),('111','MA-301','1','Summer',2020,NULL);
+
 --
 -- Table structure for table `teaches`
 --
@@ -292,8 +324,21 @@ CREATE TABLE `teaches` (
 --
 
 INSERT INTO `teaches` (`ID`, `course_id`, `sec_id`, `semester`, `year`) VALUES
-('76766','MA-101','1','Summer',2019),('76766','MA-301','1','Summer',2020),('10101','CS-101','1','Fall',2019),('45565','CS-101','1','Spring',2020),('83821','CS-190','1','Spring',2019),('83821','CS-190','2','Spring',2019),('10101','CS-315','1','Spring',2020),('45565','CS-319','1','Spring',2020),('83821','CS-319','2','Spring',2020),('10101','CS-347','1','Fall',2019),('98345','EE-181','1','Spring',2019),('12121','CE-201','1','Spring',2020),('32343','HIS-351','1','Spring',2020),('15151','ME-199','1','Spring',2020),('22222','PHY-101','1','Fall',2019);
-
+('10101', 'CS-101', '1', 'Fall', '2019'),
+('10101', 'CS-315', '1', 'Spring', '2020'),
+('10101', 'CS-347', '1', 'Fall', '2019'),
+('12121', 'CE-201', '1', 'Spring', '2020'),
+('15151', 'ME-199', '1', 'Spring', '2020'),
+('22222', 'PHY-101', '1', 'Fall', '2019'),
+('32343', 'HIS-351', '1', 'Spring', '2020'),
+('45565', 'CS-101', '1', 'Spring', '2020'),
+('45565', 'CS-319', '1', 'Spring', '2020'),
+('76766', 'MA-101', '1', 'Summer', '2019'),
+('76766', 'MA-301', '1', 'Summer', '2020'),
+('83821', 'CS-190', '1', 'Spring', '2019'),
+('83821', 'CS-190', '2', 'Spring', '2019'),
+('83821', 'CS-319', '2', 'Spring', '2020'),
+('98345', 'EE-181', '1', 'Spring', '2019');
 
 -- --------------------------------------------------------
 

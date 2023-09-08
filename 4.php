@@ -1,6 +1,8 @@
+<h3>4. Find all courses taught in the Summer 2019 semester or in the Spring 2020 semester.</h3><br>
+
 <center> <h1>Output Table</h1>
 <?php 
-	$query = "SELECT course.course_id,course.title FROM course NATURAL JOIN section WHERE (section.semester='Summer' and section.year =2019) OR (section.semester='Spring' and section.year =2020);";
+	$query = "SELECT course.course_id,course.title FROM course NATURAL JOIN section WHERE (section.semester='Summer' AND section.year =2019) OR (section.semester='Spring' AND section.year =2020);";
 	echo "<p> <strong>Query - ". $query."</strong><br></p>";
  ?></center>
  <div class="row">

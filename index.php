@@ -47,18 +47,26 @@
 	</div>
 
 <div id="result" style="margin-left:22%;margin-right:2%">
-
+<br>
+<br>
+<br>
 	<center>		<h1><u>Assignment 1</u></h1>
 		<h2>Database and Data Mining (CS501) <br></h1>
 </center>
+<br>
+<br>
+
 	<p>
-		<ul>
- 		  <li><strong>As per requirement please access all registration forms from left.</strong></li>
-		  <dd>- black hot drink</dd>
-		  <dt>Milk</dt>
-		  <dd>- white cold drink</dd>
-		</ul>
-	</p>
+		<h3></h3>
+<!-- <center> <h2><strong> Front-End (HTML and Forms):</strong></h2></center> -->
+<h4>Following technologies are used to develop this website:-<br>&emsp; &ensp;&emsp; &ensp;• for server-side scripting <strong>PHP, </strong><br>&emsp; &ensp;&emsp; &ensp;• and for front-end <strong>HTML, CSS, JS, Jquery, AJAX. </strong><br>&emsp; &ensp;&emsp; &ensp;•<strong> MySQL </strong>as DBMS and University Database schema is based on Database System Concepts by Silberschatz, Korth and Sudarshan.</h4>
+
+ <br>
+ <br><h5>
+    • 4 Registration forms(student,instructor,advisor,department) can be accessed from left bar. <br>
+    • Output of 4 SQL Questions given in assingment can be found on left bar. 
+</h5>
+			</p>
 </div>
 
 <!-- </div> -->
@@ -66,7 +74,7 @@
 
 
 <footer class="footer" style="position: fixed;bottom: 0px;right:5px;">
-    <center><strong>DBDM Assignment</strong> &copy;Copyright <?php echo date('Y'); ?> By <b><a href='https://github.com/harsh085'>Harshit Nigam</a> </b></center>
+    <center><strong>DBDM Assignment @IIT Patna</strong> Developed By <b><a href='https://github.com/harsh085'>Harshit Nigam</a> </b></center>
 </footer>
 
 </body>
